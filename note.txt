@@ -1,0 +1,3 @@
+List，add的时候不会调用对象的equals方法，在调用contains或indexOf时，才会调用
+Map，put的时候就会调用对象的hashCode方法，如果hashCode不重复，不调用equals方法，放入元素；如果hashCode有重复，则再调用equals方法，如果true，不放入，false，形成链表
+	在调用containsKey方法时，遍历所有元素，和目标对象比较hashCode是否一样，如果没有，false，如果有，再看是否equals，如果有一个相等，true，如果没有一个相等，false
